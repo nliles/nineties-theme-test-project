@@ -1,0 +1,9 @@
+
+.breadcrumb {
+  background: white;
+}
+
+.breadcrumb a {
+    color: black;
+    font-weight: bold;
+}

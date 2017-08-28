@@ -1,0 +1,63 @@
+h1 {
+  margin-top: 7%;
+  margin-left: 0;
+  font-weight: bold;
+  font-size: 4em;
+}
+
+#home{
+  margin-top: 10vh;
+}
+
+.homeButton {
+  font-size: 30px;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	left: 37%;
+	top: 35%;
+	margin-top: 100px; 
+	position: fixed; 
+	width: 380px;
+	height: 100px;
+	border: 2px solid black;
+	background: #fff;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.homeButton:hover {
+  background: #d81159;
+  color: #fff;
+  border: none;
+}
+
+.left .homeButton:hover {
+  background: gray;
+  color: #fff;
+  border: none;
+}
+
+
+a:link, a:visited {
+  	color: black;
+  	text-decoration: none;
+}
+
+p {
+	padding-top: 25px;
+	font-size: 1.5em;
+}
+
+.left {
+	margin-left: 15px;
+}
+
+.left {
+	margin-right: 30px;
+}
+
+p {
+   text-align:center;
+   margin-top: 50px;
+   font-weight: bold;
+}
