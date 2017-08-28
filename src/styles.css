@@ -3,12 +3,8 @@
 }
 
 body {
-/*  background: #EDEDED;*/
+/*  background: gray;*/
   font-family: 'Lato', sans-serif;
-}
-
-.homeButton {
-	background: #43C59E;
 }
 
 ul {

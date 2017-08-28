@@ -1,9 +1,12 @@
+import {ActionReducer, Action, State} from '@ngrx/store'; 
 
 
-defaultHomepage = './homepage.component.css'
-export const homepageStyle = (state = defaultHomepage, {type, payload}) => {
+export const setStyle = (state = false, {type, payload}) => {
 	switch (type) {
+		case "TOGGLE_STYLE":
+			// return state;
+			console.log(state)
 		default:
 			return state;
-	}
+    }
 }
