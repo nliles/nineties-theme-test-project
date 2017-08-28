@@ -1,12 +1,12 @@
-<div class="body" >
+<div class="body">
 	<div style="text-align:center">
 	  <h1>
 	    LOREM IPSUM
 	  </h1>
 	</div>
-	<div [style.background-color]="toggleCSS()">
+	<div>
 	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-	  <button (click)="showNinetiesStyle=!showNinetiesStyle" class="homeButton">
+	  <button (click)="showNinetiesStyle=!showNinetiesStyle;toggleCSS(showNinetiesStyle)" class="homeButton">
 	  {{button}}
 	  </button> 
 	</div>

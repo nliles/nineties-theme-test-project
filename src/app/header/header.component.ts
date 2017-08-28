@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit {
+  public setStyle
 
-  constructor() { }
+  constructor(private store:Store<any>) {
+  	store.select('setStyle')
+  		.subscribe(setStyle => {this.setStyle = setStyle;})
+   }
 
   ngOnInit() {
   }

@@ -1,11 +1,12 @@
 import {ActionReducer, Action, State} from '@ngrx/store'; 
 
 
-export const setStyle = (state = false, {type, payload}) => {
+export const toggleStyle = (state = false, {type, payload}) => {
 	switch (type) {
 		case "TOGGLE_STYLE":
-			// return state;
-			console.log(state)
+			let newState = state
+			newState = payload
+			return newState;
 		default:
 			return state;
     }

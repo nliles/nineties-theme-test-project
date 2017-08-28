@@ -26,17 +26,10 @@ h1 {
 }
 
 .homeButton:hover {
-  background: #d81159;
+  background: black;
   color: #fff;
   border: none;
 }
-
-.left .homeButton:hover {
-  background: gray;
-  color: #fff;
-  border: none;
-}
-
 
 a:link, a:visited {
   	color: black;
@@ -46,20 +39,10 @@ a:link, a:visited {
 p {
 	padding-top: 25px;
 	font-size: 1.5em;
+  font-weight: bold;
+  text-align:center;
 }
 
-.left {
-	margin-left: 15px;
-}
 
-.left {
-	margin-right: 30px;
-}
-
-p {
-   text-align:center;
-   margin-top: 50px;
-   font-weight: bold;
-}
 
 

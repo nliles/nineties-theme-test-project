@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { setStyle } from './reducers/style.reducer';
+import { toggleStyle } from './reducers/style.reducer';
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { setStyle } from './reducers/style.reducer';
   ],
   imports: [
     BrowserModule,
-    StoreModule.provideStore({setStyle})
+    StoreModule.provideStore({toggleStyle})
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { setStyle } from '../reducers/style.reducer';
+import { toggleStyle } from '../reducers/style.reducer';
 import { Store } from '@ngrx/store';
 
 
@@ -11,19 +11,20 @@ import { Store } from '@ngrx/store';
 
 
 export class HomepageComponent implements OnInit {
-	button = 'The 90s';
+  button = 'The 90s';
 
-	showNinetiesStyle = false;
-	//call action here and pass on showNinetiesStyle 
-	toggleCSS() {
-		return (this.showNinetiesStyle ? 'yellow' : 'red');
-		// this.store.dispatch({type: "TOGGLE_STYLE", payload: this.showNinetiesStyle})
-	}
-
-
-  constructor(private store:Store<any>) {   	
-  	// this.showNinetiesStyle = store.select('showNinetiesStyle')
+  constructor(private store:Store<any>) {     
+    // this.showNinetiesStyle = store.select('showNinetiesStyle')
   }
+
+  //call action here and pass on showNinetiesStyle 
+
+  toggleCSS(showNinetiesStyle) {
+    console.log(showNinetiesStyle)
+    this.store.dispatch({type: "TOGGLE_STYLE", payload: showNinetiesStyle})
+  }
+
+
 
   ngOnInit() {
   }

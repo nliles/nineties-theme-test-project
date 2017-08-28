@@ -5,8 +5,8 @@ export const ActionTypes = {
 export class ToggleHomepage implements Action {
   type = ActionTypes.TOGGLE_STYLE;
 
-  constructor(payload: {someProperty:string, someOtherProperty:boolean}) { }
+  constructor(payload: {someProperty:"TOGGLE_STYLE", showNinetiesStyle:boolean}) { }
 }
 
 export type Actions =
-  ToggleStyle;
+  toggleStyle(showNinetiesStyle);

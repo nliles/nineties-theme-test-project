@@ -26,7 +26,6 @@ footer {
     width: 37px;
     height: 37px;
     color: black;
-/*    background-color: #43C59E;*/
     font-size: 22px;
     text-align:center;
     padding-top: 12px;
@@ -51,10 +50,3 @@ footer {
     -ms-transition: all ease 0.3s;
 }
 
-.social .fa-facebook:hover, .social .fa-google-plus:hover  {
-    background: #909AA0;
-}
-
-.social .fa-github:hover, .social .fa-instagram:hover {
-    background: #909AA0;
-}
