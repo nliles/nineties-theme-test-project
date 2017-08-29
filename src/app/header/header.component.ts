@@ -8,12 +8,19 @@ import { Store } from '@ngrx/store';
 })
 
 export class HeaderComponent implements OnInit {
-  public setStyle
+  public nineties
 
   constructor(private store:Store<any>) {
     store.select('toggleStyle')
-      .subscribe(toggleStyle => {this.setStyle = toggleStyle;})
+      .subscribe(toggleStyle => {
+        this.nineties = toggleStyle;
+      })
    }
+
+  getNinetiesClass(){
+        const isValid=this.nineties;
+        return {nineties:isValid};
+    }
 
 
   ngOnInit() {

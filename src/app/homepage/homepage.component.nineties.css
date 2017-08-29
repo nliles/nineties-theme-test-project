@@ -1,0 +1,14 @@
+h1.nineties {
+  color: red;
+}
+
+.business-header.nineties {
+  margin-top: -20px;
+  height: 50vh;
+  min-height: 300px;
+  background: #8DCDE9;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}

@@ -6,7 +6,7 @@ import { Store } from '@ngrx/store';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  styleUrls: ['./homepage.component.css','./homepage.component.nineties.css']
 })
 
 
@@ -18,18 +18,9 @@ export class HomepageComponent implements OnInit {
     store.select('toggleStyle')
       .subscribe(toggleStyle => {
         this.nineties = toggleStyle;
-          let body = document.getElementsByTagName('body')[0];
-            
-          if(this.nineties) {
-            console.log(this.nineties)
-            body.classList.add("nineties");   //add the class
-          } else {
-              console.log(this.nineties)
-            body.classList.remove("nineties"); 
-          }
-      
+          let body = document.getElementsByTagName('body')[0];   
+          this.nineties ? body.classList.add("nineties") : body.classList.remove("nineties");
       })
-     
    }
 
   toggleCSS(showNinetiesStyle) {
@@ -38,6 +29,11 @@ export class HomepageComponent implements OnInit {
       payload: showNinetiesStyle
     })
   }
+
+  getNinetiesClass(){
+        const isValid=this.nineties;
+        return {nineties:isValid};
+    }
 
 
   button = 'The 90s';
