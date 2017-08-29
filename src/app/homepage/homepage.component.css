@@ -57,58 +57,12 @@ a:link, a:visited {
   margin-top: 100px; 
 }
 
-.btn.nineties {
-  background: black;
-  color: black;
-  width: 200px;
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  left: 37%;
-  top: 35%;
+.btn:focus {
+  outline:0;
 }
 
 
 
-
-
-
-
-
-/*h1 {
-  margin-top: 7%;
-  margin-left: 0;
-  font-weight: bold;
-  font-size: 4em;
-}
-
-h1.nineties {
-  color: red;
-  margin-top: 7%;
-  margin-left: 0;
-  font-weight: bold;
-  font-size: 4em;
-}
-
-#home{
-  margin-top: 10vh;
-}*/
-
-/*.homeButton {
-  font-size: 30px;
-	appearance: none;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	left: 37%;
-	top: 35%;
-	margin-top: 100px; 
-	position: fixed; 
-	width: 380px;
-	height: 100px;
-	border: 2px solid black;
-	background: #fff;
-	font-family: 'Lato', sans-serif;
-}*/
 
 
 

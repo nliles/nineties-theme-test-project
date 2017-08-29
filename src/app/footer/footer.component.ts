@@ -4,15 +4,22 @@ import { Store } from '@ngrx/store';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.css','./footer.component.nineties.css']
 })
 export class FooterComponent implements OnInit {
-  public setStyle
+  public nineties
 
   constructor(private store:Store<any>) {
     store.select('toggleStyle')
-      .subscribe(toggleStyle => {this.setStyle = toggleStyle;})
+      .subscribe(toggleStyle => {
+        this.nineties = toggleStyle;
+      })
    }
+
+  getNinetiesClass(){
+        const isValid=this.nineties;
+        return {nineties:isValid};
+    }
 
   ngOnInit() {
   }

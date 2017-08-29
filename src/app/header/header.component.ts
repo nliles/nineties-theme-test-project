@@ -4,7 +4,7 @@ import { Store } from '@ngrx/store';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css','./header.component.nineties.css']
 })
 
 export class HeaderComponent implements OnInit {
