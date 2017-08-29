@@ -32,15 +32,10 @@ export class HomepageComponent implements OnInit {
      
    }
 
-
-
-  //call action here and pass on showNinetiesStyle 
-
   toggleCSS(showNinetiesStyle) {
-    // console.log(showNinetiesStyle)
     this.store.dispatch({
       type: "TOGGLE_STYLE", 
-      theme: showNinetiesStyle
+      payload: showNinetiesStyle
     })
   }
 
