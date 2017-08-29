@@ -3,7 +3,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
-import { setStyle } from './app/reducers/style.reducer';
+import { toggleStyle } from './app/reducers/style.reducer';
 
 import {Store, provideStore} from '@ngrx/store'; 
 
@@ -11,4 +11,4 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule, [provideStore({setStyle})] );
+platformBrowserDynamic().bootstrapModule(AppModule, [provideStore({toggleStyle})] );

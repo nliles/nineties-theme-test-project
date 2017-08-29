@@ -11,19 +11,41 @@ import { Store } from '@ngrx/store';
 
 
 export class HomepageComponent implements OnInit {
-  button = 'The 90s';
+ 
+  public nineties
 
-  constructor(private store:Store<any>) {     
-    // this.showNinetiesStyle = store.select('showNinetiesStyle')
-  }
+  constructor(private store:Store<any>) {
+    store.select('toggleStyle')
+      .subscribe(toggleStyle => {
+        this.nineties = toggleStyle;
+          let body = document.getElementsByTagName('body')[0];
+            
+          if(this.nineties) {
+            console.log(this.nineties)
+            body.classList.add("nineties");   //add the class
+          } else {
+              console.log(this.nineties)
+            body.classList.remove("nineties"); 
+          }
+      
+      })
+     
+   }
+
+
 
   //call action here and pass on showNinetiesStyle 
 
   toggleCSS(showNinetiesStyle) {
-    console.log(showNinetiesStyle)
-    this.store.dispatch({type: "TOGGLE_STYLE", payload: showNinetiesStyle})
+    // console.log(showNinetiesStyle)
+    this.store.dispatch({
+      type: "TOGGLE_STYLE", 
+      theme: showNinetiesStyle
+    })
   }
 
+
+  button = 'The 90s';
 
 
   ngOnInit() {

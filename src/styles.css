@@ -3,8 +3,18 @@
 }
 
 body {
-/*  background: gray;*/
+  background:   
+  linear-gradient(
+    rgba(241, 194, 204, 0.65), 
+    rgba(241, 194, 204, 0.65)
+    ),#F1C2CC url("linenBG.jpg");
   font-family: 'Lato', sans-serif;
+}
+
+body.nineties {
+  background:  black;
+  font-family: 'Lato', sans-serif; 
+  
 }
 
 ul {

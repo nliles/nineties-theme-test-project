@@ -10,8 +10,8 @@ export class FooterComponent implements OnInit {
   public setStyle
 
   constructor(private store:Store<any>) {
-  	store.select('setStyle')
-  		.subscribe(setStyle => {this.setStyle = setStyle;})
+    store.select('toggleStyle')
+      .subscribe(toggleStyle => {this.setStyle = toggleStyle;})
    }
 
   ngOnInit() {
