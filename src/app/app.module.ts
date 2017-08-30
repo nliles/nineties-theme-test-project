@@ -7,7 +7,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { toggleStyle } from './reducers/style.reducer';
-
+import { StyleService } from './services/style.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { toggleStyle } from './reducers/style.reducer';
     BrowserModule,
     StoreModule.provideStore({toggleStyle})
   ],
-  providers: [],
+  providers: [StyleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

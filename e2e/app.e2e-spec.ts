@@ -1,15 +1,30 @@
 import { AppPage } from './app.po';
 
-describe('AppPage Content', () => {
+describe('AppPage Header Content', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-   it('should have a button', () => {
+  it('should have a nav bar that contains a list of two items', () => {
     page.navigateTo();
-    expect(page.getButton()).toBeTruthy();
+    expect(page.getNavListItems().count()).toBe(2);
+  });
+
+
+  it('should have a nav bar that contains a paragraph element with text', () => {
+    page.navigateTo();
+    expect(page.getNavListParagraphText()).toEqual('Contact');
+  });
+
+});
+
+describe('AppPage HomePage Content', () => {
+  let page: AppPage;
+
+  beforeEach(() => {
+    page = new AppPage();
   });
 
    it('should have a button with text "Toggle Style"', () => {
@@ -17,44 +32,50 @@ describe('AppPage Content', () => {
     expect(page.getButtonText()).toEqual('Toggle Style');
   });
 
-   it('should have a nav bar', () => {
-    page.navigateTo();
-    expect(page.getNav()).toBeTruthy();
-  });
-
-   it('should have a nav bar that contains a list', () => {
-    page.navigateTo();
-    expect(page.getNavList()).toBeTruthy();
-  });
-
-  it('should have a nav bar that contains a list with items', () => {
-    page.navigateTo();
-    expect(page.getNavListItems()).toBeTruthy();
-  });
-
-
-  it('should have a nav bar that contains a paragraph element', () => {
-    page.navigateTo();
-    expect(page.getNavListParagraph()).toBeTruthy();
-  });
-
-  it('should have a nav bar that contains a paragraph element with text', () => {
-    page.navigateTo();
-    expect(page.getNavListParagraphText()).toEqual('Contact');
-  });
-
-   it('should have a footer', () => {
-    page.navigateTo();
-    expect(page.getNav()).toBeTruthy();
-  });
-
   it('should display a title', () => {
     page.navigateTo();
     expect(page.getTitleText()).toEqual('Lorem Ipsum Dolor');
   });
 
+  it('should have a background-color', () => {
+    page.navigateTo();
+    expect(page.getPageBackgroundColor()).toEqual('rgba(237, 237, 237, 1)');
+  });
+
 
 });
+
+
+describe('AppPage Footer Content', () => {
+  let page: AppPage;
+
+  beforeEach(() => {
+    page = new AppPage();
+  });
+
+  it('should have a footer with a background-color', () => {
+    page.navigateTo();
+    expect(page.getFooterBackground()).toEqual('rgba(41, 44, 47, 1)');
+  });
+
+  it('should have a footer with three links', () => {
+    page.navigateTo();
+    expect(page.getFooterLinks().count()).toBe(3);
+  });
+
+  it('should have three social media icon links', () => {
+    page.navigateTo();
+    expect(page.getFooterIcons().count()).toBe(4);
+  });
+
+  it('should have a phone number', () => {
+    page.navigateTo();
+    expect(page.getFooterPhoneNumber()).toEqual('123-456-7890');
+  });
+
+});
+
+
 
 describe('AppPage button behavior', function() {
     let page: AppPage;
@@ -74,8 +95,8 @@ describe('AppPage button behavior', function() {
     page.navigateTo();
     page.getButton().click();
     page.getButton().click();
-    expect(page.getToggledNavClass()).toMatch('');
-    expect(page.getToggledFooterClass()).toMatch('');
+    expect(page.getToggledNavClass()).not.toMatch('nineties');
+    expect(page.getToggledFooterClass()).not.toMatch('nineties');
   });   
 
    it('should change the nav bar background after click', () => {
@@ -94,6 +115,12 @@ describe('AppPage button behavior', function() {
     page.navigateTo();
     page.getButton().click();
     expect(page.getFooterBackground()).toBe('rgba(216, 17, 89, 1)');
+  }); 
+
+   it('should change the homepage background after click', () => {
+    page.navigateTo();
+    page.getButton().click();
+    expect(page.getPageBackground()).toBe('rgba(0, 0, 0, 0) url("https://media.giphy.com/media/87tkMovdHMRk4/giphy.gif") repeat scroll 0% 0% / auto padding-box border-box');
   }); 
 
 });

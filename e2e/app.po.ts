@@ -1,12 +1,10 @@
 import { browser, by, element } from 'protractor';
 
 export class AppPage {
+//homepage
+
   navigateTo() {
     return browser.get('/');
-  }
-
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
   }
 
   getTitleText() {
@@ -17,47 +15,33 @@ export class AppPage {
     return element(by.css('app-root button'));
   }
 
-  getNav() {
-    return element(by.css('app-root nav'));
+  getButtonText() {
+    return element(by.css('app-root button')).getText();
   }
 
-  getNavList() {
-    return element(by.css('app-root nav ul'));
+  getPageBackgroundColor() {
+    return element(by.css('app-root .business-header')).getCssValue('background-color');
   }
+
+  getPageBackground() {
+    return element(by.css('app-root .business-header')).getCssValue('background');
+  }
+
+//header
 
   getNavListItems() {
-    return element(by.css('app-root nav ul li'));
-  }
-
-  getNavListParagraph() {
-    return element(by.css('app-root nav p'));
+    return element.all(by.css('app-root nav ul li'));
   }
 
   getNavListParagraphText() {
     return element(by.css('app-root nav p')).getText();
   }
 
-  getFooter() {
-    return element(by.css('app-root footer'));
-  }
-
-  getButtonText() {
-    return element(by.css('app-root button')).getText();
-  }
-
   getToggledNavClass() {
     return element(by.css('app-root nav')).getAttribute('class');
   }
 
-  getToggledFooterClass() {
-    return element(by.css('app-root footer')).getAttribute('class');
-  }
-
   getNavColor() {
-    return element(by.css('app-root nav')).getCssValue('color');
-  }
-
-  getBackgroundColor() {
     return element(by.css('app-root nav')).getCssValue('color');
   }
 
@@ -65,8 +49,27 @@ export class AppPage {
     return element(by.css('app-root nav')).getCssValue('background-color');
   }
 
-  getFooterBackground() {
-    return element(by.css('app-root footer')).getCssValue('background-color');
+//footer 
+
+  getToggledFooterClass() {
+    return element(by.css('app-root footer')).getAttribute('class');
   }
+
+  getFooterLinks() {
+    return element.all(by.css('.footer-links a'));
+  }
+
+  getFooterIcons() {
+    return element.all(by.css('.footer-icons a'));
+  }
+
+  getFooterPhoneNumber() {
+    return element.all(by.css('.footer-center div')).get(1).getText();
+  }
+
+  getFooterBackground() {
+    return element(by.css('app-root .footer-distributed')).getCssValue('background-color');
+  }
+
 
 }

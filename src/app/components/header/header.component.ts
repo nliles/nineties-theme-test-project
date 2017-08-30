@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { StyleService } from '../../services/style.service';
 
 @Component({
   selector: 'app-header',
@@ -8,14 +9,19 @@ import { Store } from '@ngrx/store';
 })
 
 export class HeaderComponent implements OnInit {
+ 
   public nineties
 
-  constructor(private store:Store<any>) {
+  constructor(private store:Store<any>, private styleService:StyleService ) {
     store.select('toggleStyle')
       .subscribe(toggleStyle => {
         this.nineties = toggleStyle;
       })
    }
+
+  ngOnInit() {
+    console.log()
+  }
 
   getNinetiesClass(){
         const isValid=this.nineties;
@@ -23,7 +29,5 @@ export class HeaderComponent implements OnInit {
     }
 
 
-  ngOnInit() {
-  }
 
 }
