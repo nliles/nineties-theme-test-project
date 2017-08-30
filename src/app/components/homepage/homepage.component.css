@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  font-weight: 30px;
+  font-size: 50px;
 }
 
 
@@ -18,6 +18,7 @@ h1 {
 }
 
 .business-header {
+  max-height: 100%;
   margin-top: -20px;
   height: 50vh;
   min-height: 300px;
@@ -35,7 +36,7 @@ h1 {
 .button-container {
   margin-left:40%;
   margin-right:40%;
-  margin-top: -90px;
+  margin-top: -45px;
 }
 
 a:link, a:visited {
@@ -44,8 +45,8 @@ a:link, a:visited {
 }
 
 .btn {
-  background: white;
-  color: black;
+  background: #33383b;
+  color: white;
   width: 200px;
   appearance: none;
   -moz-appearance: none;
@@ -57,6 +58,11 @@ a:link, a:visited {
   outline:0;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 

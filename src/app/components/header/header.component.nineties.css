@@ -1,9 +1,6 @@
-.breadcrumb.nineties {
+.navbar.nineties {
   background: #d81159;
   border-radius: 0;
   border-bottom: 1px solid white;
 }
 
-.breadcrumb a.nineties {
-    font-weight: bold;
-}

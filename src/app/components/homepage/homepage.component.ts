@@ -23,10 +23,10 @@ export class HomepageComponent implements OnInit {
       })
    }
 
-  toggleCSS(showNinetiesStyle) {
+  toggleCSS(theme) {
     this.store.dispatch({
       type: "TOGGLE_STYLE", 
-      payload: showNinetiesStyle
+      payload: theme
     })
   }
 
@@ -37,7 +37,7 @@ export class HomepageComponent implements OnInit {
 
 
   button = 'Toggle Style';
-
+  title = 'Lorem Ipsum Dolor'
 
   ngOnInit() {
   }
