@@ -47,7 +47,8 @@ a:link, a:visited {
 .btn {
   background: #33383b;
   color: white;
-  width: 200px;
+  width: 250px;
+  height: 45px;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;

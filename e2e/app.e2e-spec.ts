@@ -12,7 +12,7 @@ describe('AppPage Content', () => {
     expect(page.getButton()).toBeTruthy();
   });
 
-   it('should have a button with text', () => {
+   it('should have a button with text "Toggle Style"', () => {
     page.navigateTo();
     expect(page.getButtonText()).toEqual('Toggle Style');
   });
@@ -31,6 +31,7 @@ describe('AppPage Content', () => {
     page.navigateTo();
     expect(page.getNavListItems()).toBeTruthy();
   });
+
 
   it('should have a nav bar that contains a paragraph element', () => {
     page.navigateTo();
@@ -55,7 +56,7 @@ describe('AppPage Content', () => {
 
 });
 
-describe('homepage toggle style button', function() {
+describe('AppPage button behavior', function() {
     let page: AppPage;
 
     beforeEach(() => {
@@ -76,5 +77,23 @@ describe('homepage toggle style button', function() {
     expect(page.getToggledNavClass()).toMatch('');
     expect(page.getToggledFooterClass()).toMatch('');
   });   
+
+   it('should change the nav bar background after click', () => {
+    page.navigateTo();
+    page.getButton().click();
+    expect(page.getNavBackground()).toBe('rgba(216, 17, 89, 1)');
+  });  
+
+  it('should change the nav bar color after click', () => {
+    page.navigateTo();
+    page.getButton().click();
+    expect(page.getNavColor()).toBe('rgba(0, 0, 0, 1)');
+  });  
+
+   it('should change the footer background after click', () => {
+    page.navigateTo();
+    page.getButton().click();
+    expect(page.getFooterBackground()).toBe('rgba(216, 17, 89, 1)');
+  }); 
 
 });

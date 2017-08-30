@@ -53,5 +53,20 @@ export class AppPage {
     return element(by.css('app-root footer')).getAttribute('class');
   }
 
+  getNavColor() {
+    return element(by.css('app-root nav')).getCssValue('color');
+  }
+
+  getBackgroundColor() {
+    return element(by.css('app-root nav')).getCssValue('color');
+  }
+
+  getNavBackground() {
+    return element(by.css('app-root nav')).getCssValue('background-color');
+  }
+
+  getFooterBackground() {
+    return element(by.css('app-root footer')).getCssValue('background-color');
+  }
 
 }
