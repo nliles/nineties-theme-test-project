@@ -1,8 +1,10 @@
 body {
   font-family: 'Lato', sans-serif;
   font-weight: bold;
+  background: #ededed;
 }
 
 body.nineties {
   font-family: "Comic Sans MS", cursive, sans-serif;
+  background: url("https://media.giphy.com/media/87tkMovdHMRk4/giphy.gif");
 }

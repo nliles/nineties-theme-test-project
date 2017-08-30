@@ -1,11 +1,9 @@
 .breadcrumb.nineties {
   background: #d81159;
   border-radius: 0;
-  border-bottom: 5px outset grey;
-  box-shadow: 1px 1px 5px grey;
+  border-bottom: 1px solid white;
 }
 
 .breadcrumb a.nineties {
-    color: green;
     font-weight: bold;
 }

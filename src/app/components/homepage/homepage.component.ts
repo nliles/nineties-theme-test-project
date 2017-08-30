@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { toggleStyle } from '../reducers/style.reducer';
+import { toggleStyle } from '../../reducers/style.reducer';
 import { Store } from '@ngrx/store';
 
 
@@ -36,7 +36,7 @@ export class HomepageComponent implements OnInit {
     }
 
 
-  button = 'The 90s';
+  button = 'Toggle Style';
 
 
   ngOnInit() {

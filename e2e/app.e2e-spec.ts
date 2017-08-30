@@ -12,3 +12,11 @@ describe('nineties-theme-test-project App', () => {
     expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });
+
+
+describe('toggle style button', () => {
+	it("it toggles the 'nineties' class", function() {
+	      $('.identity').click();
+	      expect(element.attr('class')).toEqual('nineties');
+	});  
+});

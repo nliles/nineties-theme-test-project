@@ -1,8 +1,9 @@
 .breadcrumb {
-  background: white;
+  background: #33383b;
+  color: black;
 }
 
 .breadcrumb a {
-    color: black;
+    color: white;
     font-weight: bold;
 }
