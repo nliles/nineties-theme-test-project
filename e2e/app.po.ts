@@ -5,10 +5,6 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getBody() {
-    return element(by.css('app-root body'));
-  }
-
   getParagraphText() {
     return element(by.css('app-root h1')).getText();
   }
@@ -49,8 +45,12 @@ export class AppPage {
     return element(by.css('app-root button')).getText();
   }
 
-  getToggledClass() {
-    return element(by.css('app-root button')).getText();
+  getToggledNavClass() {
+    return element(by.css('app-root nav')).getAttribute('class');
+  }
+
+  getToggledFooterClass() {
+    return element(by.css('app-root footer')).getAttribute('class');
   }
 
 

@@ -65,7 +65,16 @@ describe('homepage toggle style button', function() {
    it('should display class "nineties" after click', () => {
     page.navigateTo();
     page.getButton().click();
-    expect(page.getBody()).hasClass('nineties');
+    expect(page.getToggledNavClass()).toMatch('nineties');
+    expect(page.getToggledFooterClass()).toMatch('nineties');
+  });   
+
+   it('should not display class "nineties" after two clicks', () => {
+    page.navigateTo();
+    page.getButton().click();
+    page.getButton().click();
+    expect(page.getToggledNavClass()).toMatch('');
+    expect(page.getToggledFooterClass()).toMatch('');
   });   
 
 });
