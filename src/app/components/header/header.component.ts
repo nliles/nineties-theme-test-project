@@ -12,21 +12,11 @@ export class HeaderComponent implements OnInit {
 
   public nineties
 
-  constructor(private store:Store<any>, private styleService:StyleService ) {
-    store.select('toggleStyle')
-      .subscribe(toggleStyle => {
-        this.nineties = toggleStyle;
+  constructor() {
       })
    }
 
   ngOnInit() {
   }
-
-  getNinetiesClass(){
-        const isValid=this.nineties;
-        return {nineties:isValid};
-    }
-
-
 
 }
