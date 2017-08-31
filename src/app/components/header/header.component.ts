@@ -10,9 +10,7 @@ import { StyleService } from '../../services/style.service';
 
 export class HeaderComponent implements OnInit {
 
-  constructor() {
-      })
-   }
+  constructor() {}
 
   ngOnInit() {
   }

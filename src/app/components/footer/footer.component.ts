@@ -8,9 +8,7 @@ import { Store } from '@ngrx/store';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() {
-      })
-   }
+  constructor() {}
 
   ngOnInit() {
   }
