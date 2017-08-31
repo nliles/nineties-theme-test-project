@@ -10,8 +10,6 @@ import { StyleService } from '../../services/style.service';
 
 export class HeaderComponent implements OnInit {
 
-  public nineties
-
   constructor() {
       })
    }

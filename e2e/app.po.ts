@@ -6,20 +6,20 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getTitleText() {
-    return element(by.css('app-root h1')).getText();
-  }
-
   getBody() {
     return element(by.tagName("body")).getAttribute('class');
   }
-  
+
   getButton() {
     return element(by.css('app-root button'));
   }
 
-  getButtonText() {
-    return element(by.css('app-root button')).getText();
+  getButtonBackgroundColor() {
+    return element(by.css('app-root button')).getCssValue('background-color');
+  }
+
+  getTitleColor() {
+    return element(by.css('app-root .display-3')).getCssValue('background-color');
   }
 
   getPageBackgroundColor() {
@@ -30,22 +30,6 @@ export class AppPage {
     return element(by.css('app-root .business-header')).getCssValue('background');
   }
 
-  getToggledPageClass() {
-    return element(by.css('.business-header')).getAttribute('class');
-  }
-
-  getNavListItems() {
-    return element.all(by.css('app-root nav ul li'));
-  }
-
-  getNavListParagraphText() {
-    return element(by.css('app-root nav p')).getText();
-  }
-
-  getToggledNavClass() {
-    return element(by.css('app-root nav')).getAttribute('class');
-  }
-
   getNavColor() {
     return element(by.css('app-root nav')).getCssValue('color');
   }
@@ -54,24 +38,16 @@ export class AppPage {
     return element(by.css('app-root nav')).getCssValue('background-color');
   }
 
-  getToggledFooterClass() {
-    return element(by.css('app-root footer')).getAttribute('class');
-  }
-
-  getFooterLinks() {
-    return element.all(by.css('.footer-links a'));
-  }
-
-  getFooterIcons() {
-    return element.all(by.css('.footer-icons a'));
-  }
-
-  getFooterPhoneNumber() {
-    return element.all(by.css('.footer-center div')).get(1).getText();
+  getFooterIconBackground() {
+    return element(by.css('app-root .footer-icons a')).getCssValue('background-color');
   }
 
   getFooterBackground() {
     return element(by.css('app-root .footer-distributed')).getCssValue('background-color');
+  }
+
+  getFontFamily() {
+    return element(by.tagName("body")).getCssValue('font-family');
   }
 
 
