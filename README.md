@@ -28,15 +28,14 @@
 
 
 
-## explain any decision you had to make when architecting the application 
-I divided my application into three components: header, footer, homepage. I saw various ways to organize and setup ngrx/store but ultimately, I created a reducer folder with a style reducer that
+## Explain any decision you had to make when architecting the application 
 
-CSS
-
+I divided my application into three components: header, footer, and homepage with the homepage component subscribing to the store. I saw various ways to organize and setup ngrx/store but I ultimately chose to dispatch an action from my homepage component rather than create an injectable actions class since it was such a simple application. I created an actions folder where I defined my action types and a reducers folder to store my style reducer.
 
 
 ## How I found working with Angular and ngrx.
 
-Overall, I found the learning curve with Angular to be steeper than with React. However, I really enjoyed using Angular CLI and found it to be a very easy and convenient way to create an Angular application. The setup process was so simple and the folder strcture was so organized. It was great for someone new to Angular to see how everything should be setup and organized according to best practices. I did find ngrx/store to be a bit tricky at first but I watched some great instructional videos which cleared things up. Ulitmately, it was similar to Redux in terms of setup and organization. Overall, I enjoyed the experience and felt like I learned a lot.
+Overall, I found the learning curve with Angular to be steeper than with React. However, I really enjoyed using Angular CLI and found it to be a very easy and convenient way to create an Angular application. The setup process was so simple and the folder structure was so organized. It was great for someone new to Angular to see how everything should be setup and organized according to best practices. I did find ngrx/store to be a bit tricky at first but I watched some great instructional videos which cleared things up. I found it to be similar to Redux in terms of setup and organization. Overall, I enjoyed the experience and felt like I learned a lot.
+
 
 
