@@ -14,20 +14,24 @@ export class AppPage {
     return element(by.css('app-root button'));
   }
 
+  getFont() {
+    return element(by.tagName("body")).getCssValue('font-family');
+  }
+
   getButtonBackgroundColor() {
     return element(by.css('app-root button')).getCssValue('background-color');
   }
 
   getTitleColor() {
-    return element(by.css('app-root .display-3')).getCssValue('background-color');
+    return element(by.css('app-root h1')).getCssValue('color');
   }
 
   getPageBackgroundColor() {
-    return element(by.css('app-root .business-header')).getCssValue('background-color');
+    return element(by.tagName("body")).getCssValue('background-color');
   }
 
   getPageBackground() {
-    return element(by.css('app-root .business-header')).getCssValue('background');
+    return element(by.tagName("body")).getCssValue('background');
   }
 
   getNavColor() {
@@ -38,12 +42,28 @@ export class AppPage {
     return element(by.css('app-root nav')).getCssValue('background-color');
   }
 
-  getFooterIconBackground() {
-    return element(by.css('app-root .footer-icons a')).getCssValue('background-color');
+  getNavBorder() {
+    return element(by.css('app-root nav')).getCssValue('border-bottom');
+  }
+
+  getFooterBorder() {
+    return element(by.css('app-root footer')).getCssValue('border-top');
+  }
+
+  getButtonBorder() {
+    return element(by.css('app-root button')).getCssValue('border');
   }
 
   getFooterBackground() {
-    return element(by.css('app-root .footer-distributed')).getCssValue('background-color');
+    return element(by.css('app-root footer')).getCssValue('background-color');
+  }
+
+  getFooterCenterIconBackground() {
+    return element.all(by.css('app-root .footer-distributed .footer-center i')).getCssValue('background-color');
+  }
+
+  getFooterSocialIconBackground() {
+    return element.all(by.css('app-root .footer-icons a')).getCssValue('background-color');
   }
 
   getFontFamily() {
