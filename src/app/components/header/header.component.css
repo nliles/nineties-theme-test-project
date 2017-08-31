@@ -1,0 +1,10 @@
+.navbar {
+  background: #33383b;
+  border-radius: 0;
+  color: black;
+}
+
+.navbar a, .navbar p {
+    color: white;
+    font-weight: bold;
+}

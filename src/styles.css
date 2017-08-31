@@ -1,0 +1,45 @@
+body {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 2px;
+  background: #ededed;
+}
+
+body.nineties {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: url("https://media.giphy.com/media/87tkMovdHMRk4/giphy.gif");
+}
+
+/**
+Homepage overrides
+*/
+
+body.nineties h1 {
+  color: #d81159;
+}
+
+body.nineties .business-header {
+  background: url("https://media.giphy.com/media/87tkMovdHMRk4/giphy.gif") !important;
+}
+
+body.nineties .btn {
+  background: #d81159;
+  border: 5px outset grey;
+  box-shadow: 1px 1px 5px grey;
+}
+
+
+body.nineties footer {
+    background: #d81159;
+    border-top: 3px solid white;
+}
+
+body.nineties .footer-distributed .footer-center i,
+body.nineties .footer-distributed .footer-icons a {
+    background-color:  #33383b;
+}
+
+body.nineties .navbar {
+  background: #d81159;
+  border-radius: 0;
+  border-bottom: 3px solid white;
+}
