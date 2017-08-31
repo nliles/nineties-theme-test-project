@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { toggleStyle } from '../../reducers/style.reducer';
 import { Store } from '@ngrx/store';
+import { TOGGLE_STYLE } from "../../actions/style.action";
 
 
 @Component({
