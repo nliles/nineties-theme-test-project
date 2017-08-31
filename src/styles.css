@@ -29,13 +29,13 @@ body.nineties .btn {
 
 
 body.nineties footer {
-    background: #d81159;
-    border-top: 3px solid white;
+    background: #d81159 !important;
+    border-top: 3px solid white !important;
 }
 
 body.nineties .footer-distributed .footer-center i,
 body.nineties .footer-distributed .footer-icons a {
-    background-color:  #33383b;
+    background-color:  #33383b !important;
 }
 
 body.nineties .navbar {

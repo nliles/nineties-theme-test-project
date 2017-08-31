@@ -30,12 +30,6 @@ export class HomepageComponent implements OnInit {
     })
   }
 
-  getNinetiesClass(){
-        const isValid=this.nineties;
-        return {nineties:isValid};
-    }
-
-
   button = 'Toggle Me';
   title = 'Lorem Ipsum Dolor'
 
