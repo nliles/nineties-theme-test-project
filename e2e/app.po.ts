@@ -6,44 +6,32 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getTitleText() {
-    return element(by.css('app-root h1')).getText();
-  }
-
   getBody() {
     return element(by.tagName("body")).getAttribute('class');
   }
-  
+
   getButton() {
     return element(by.css('app-root button'));
   }
 
-  getButtonText() {
-    return element(by.css('app-root button')).getText();
+  getFont() {
+    return element(by.tagName("body")).getCssValue('font-family');
+  }
+
+  getButtonBackgroundColor() {
+    return element(by.css('app-root button')).getCssValue('background-color');
+  }
+
+  getTitleColor() {
+    return element(by.css('app-root h1')).getCssValue('color');
   }
 
   getPageBackgroundColor() {
-    return element(by.css('app-root .business-header')).getCssValue('background-color');
+    return element(by.tagName("body")).getCssValue('background-color');
   }
 
   getPageBackground() {
-    return element(by.css('app-root .business-header')).getCssValue('background');
-  }
-
-  getToggledPageClass() {
-    return element(by.css('.business-header')).getAttribute('class');
-  }
-
-  getNavListItems() {
-    return element.all(by.css('app-root nav ul li'));
-  }
-
-  getNavListParagraphText() {
-    return element(by.css('app-root nav p')).getText();
-  }
-
-  getToggledNavClass() {
-    return element(by.css('app-root nav')).getAttribute('class');
+    return element(by.tagName("body")).getCssValue('background');
   }
 
   getNavColor() {
@@ -54,24 +42,32 @@ export class AppPage {
     return element(by.css('app-root nav')).getCssValue('background-color');
   }
 
-  getToggledFooterClass() {
-    return element(by.css('app-root footer')).getAttribute('class');
+  getNavBorder() {
+    return element(by.css('app-root nav')).getCssValue('border-bottom');
   }
 
-  getFooterLinks() {
-    return element.all(by.css('.footer-links a'));
+  getFooterBorder() {
+    return element(by.css('app-root footer')).getCssValue('border-top');
   }
 
-  getFooterIcons() {
-    return element.all(by.css('.footer-icons a'));
-  }
-
-  getFooterPhoneNumber() {
-    return element.all(by.css('.footer-center div')).get(1).getText();
+  getButtonBorder() {
+    return element(by.css('app-root button')).getCssValue('border');
   }
 
   getFooterBackground() {
-    return element(by.css('app-root .footer-distributed')).getCssValue('background-color');
+    return element(by.css('app-root footer')).getCssValue('background-color');
+  }
+
+  getFooterCenterIconBackground() {
+    return element.all(by.css('app-root .footer-distributed .footer-center i')).getCssValue('background-color');
+  }
+
+  getFooterSocialIconBackground() {
+    return element.all(by.css('app-root .footer-icons a')).getCssValue('background-color');
+  }
+
+  getFontFamily() {
+    return element(by.tagName("body")).getCssValue('font-family');
   }
 
 
