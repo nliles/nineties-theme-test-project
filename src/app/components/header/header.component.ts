@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { StyleService } from '../../services/style.service';
 
 @Component({
   selector: 'app-header',
