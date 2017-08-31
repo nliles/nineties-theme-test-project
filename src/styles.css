@@ -18,7 +18,7 @@ body.nineties h1 {
 }
 
 body.nineties .business-header {
-  background: url("https://media.giphy.com/media/87tkMovdHMRk4/giphy.gif") !important;
+  background: url("https://media.giphy.com/media/87tkMovdHMRk4/giphy.gif");
 }
 
 body.nineties .btn {
@@ -30,7 +30,7 @@ body.nineties .btn {
 
 body.nineties footer {
     background: #d81159 !important;
-    border-top: 3px solid white !important;
+    border-top: 3px solid white;
 }
 
 body.nineties .footer-distributed .footer-center i,
